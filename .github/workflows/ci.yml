@@ -9,9 +9,9 @@ jobs:
         with:
           dotnet-version: '8.x'
       - name: Build
-        run: for f in $(find ThirdSemester -name "*.sln"); do dotnet build $f; done
+        run: for f in $(find SPbU_Programming_CSharp_3Sem -name "*.sln"); do dotnet build $f; done
       - name: Run tests
-        run: for f in $(find ThirdSemester -name "*.sln"); do dotnet test $f; done
+        run: for f in $(find SPbU_Programming_CSharp_3Sem -name "*.sln"); do dotnet test $f; done
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
@@ -28,6 +28,6 @@ jobs:
         with:
           dotnet-version: '8.x'
       - name: Build
-        run: For /R ThirdSemester %%I in (*.sln) do dotnet build %%I
+        run: For /R SPbU_Programming_CSharp_3Sem %%I in (*.sln) do dotnet build %%I
       - name: Run tests
-        run: For /R ThirdSemester %%I in (*.sln) do dotnet test %%I
+        run: For /R SPbU_Programming_CSharp_3Sem %%I in (*.sln) do dotnet test %%I
